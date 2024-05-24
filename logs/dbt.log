@@ -1,0 +1,1125 @@
+[0m14:26:08.960493 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002256DAED5E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022571215730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002257097DA30>]}
+
+
+============================== 14:26:08.970977 | 717e678b-3f43-4f9c-b257-c70d9c1f0b39 ==============================
+[0m14:26:08.970977 [info ] [MainThread]: Running with dbt=1.8.1
+[0m14:26:08.972151 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\oscar.aguilar\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\oscar.aguilar\\jaffle_shop\\logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:26:09.017040 [info ] [MainThread]: dbt version: 1.8.1
+[0m14:26:09.017940 [info ] [MainThread]: python version: 3.12.3
+[0m14:26:09.017940 [info ] [MainThread]: python path: C:\Users\oscar.aguilar\dbt-env\Scripts\python.exe
+[0m14:26:09.018967 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m14:26:11.456761 [info ] [MainThread]: Using profiles dir at C:\Users\oscar.aguilar\.dbt
+[0m14:26:11.456761 [info ] [MainThread]: Using profiles.yml file at C:\Users\oscar.aguilar\.dbt\profiles.yml
+[0m14:26:11.458342 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\oscar.aguilar\jaffle_shop\dbt_project.yml
+[0m14:26:11.458342 [info ] [MainThread]: adapter type: bigquery
+[0m14:26:11.459510 [info ] [MainThread]: adapter version: 1.8.1
+[0m14:26:11.516866 [info ] [MainThread]: Configuration:
+[0m14:26:11.518852 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m14:26:11.519901 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m14:26:11.520844 [info ] [MainThread]: Required dependencies:
+[0m14:26:11.520844 [debug] [MainThread]: Executing "git --help"
+[0m14:26:11.618696 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:26:11.618696 [debug] [MainThread]: STDERR: "b''"
+[0m14:26:11.619714 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m14:26:11.621717 [info ] [MainThread]: Connection:
+[0m14:26:11.623170 [info ] [MainThread]:   method: oauth
+[0m14:26:11.623170 [info ] [MainThread]:   database: gothic-bastion-424206-q8
+[0m14:26:11.625243 [info ] [MainThread]:   execution_project: gothic-bastion-424206-q8
+[0m14:26:11.626397 [info ] [MainThread]:   schema: jaffle_shop
+[0m14:26:11.626397 [info ] [MainThread]:   location: EU
+[0m14:26:11.626397 [info ] [MainThread]:   priority: interactive
+[0m14:26:11.627715 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m14:26:11.628743 [info ] [MainThread]:   impersonate_service_account: None
+[0m14:26:11.628743 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m14:26:11.629738 [info ] [MainThread]:   job_retries: 1
+[0m14:26:11.630951 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m14:26:11.631552 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m14:26:11.631956 [info ] [MainThread]:   timeout_seconds: 300
+[0m14:26:11.631956 [info ] [MainThread]:   client_id: None
+[0m14:26:11.633004 [info ] [MainThread]:   token_uri: None
+[0m14:26:11.633988 [info ] [MainThread]:   dataproc_region: None
+[0m14:26:11.633988 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m14:26:11.634987 [info ] [MainThread]:   gcs_bucket: None
+[0m14:26:11.634987 [info ] [MainThread]:   dataproc_batch: None
+[0m14:26:11.635987 [info ] [MainThread]: Registered adapter: bigquery=1.8.1
+[0m14:26:11.636987 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m14:26:11.636987 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:26:20.663868 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery client: 'Runtime Error
+  Failed to authenticate with supplied credentials
+  error:
+  Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.'
+[0m14:26:20.669858 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m14:26:20.672420 [info ] [MainThread]: [31m1 check failed:[0m
+[0m14:26:20.674440 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  Runtime Error
+    Failed to authenticate with supplied credentials
+    error:
+    Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m14:26:20.676861 [debug] [MainThread]: Command `dbt debug` failed at 14:26:20.676861 after 11.97 seconds
+[0m14:26:20.676861 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m14:26:20.678861 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002257097DA30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002250A71ACC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002250A065CD0>]}
+[0m14:26:20.679859 [debug] [MainThread]: Flushing usage events
+[0m14:39:31.730940 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7E3029340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7E2ED8560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7E2A75730>]}
+
+
+============================== 14:39:31.736551 | 01349a6b-b37c-4cc4-8b0a-52b959b0fcbf ==============================
+[0m14:39:31.736551 [info ] [MainThread]: Running with dbt=1.8.1
+[0m14:39:31.736551 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\oscar.aguilar\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\oscar.aguilar\\jaffle_shop\\logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m14:39:31.771813 [info ] [MainThread]: dbt version: 1.8.1
+[0m14:39:31.772822 [info ] [MainThread]: python version: 3.12.3
+[0m14:39:31.772822 [info ] [MainThread]: python path: C:\Users\oscar.aguilar\dbt-env\Scripts\python.exe
+[0m14:39:31.774816 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m14:39:34.615831 [info ] [MainThread]: Using profiles dir at C:\Users\oscar.aguilar\.dbt
+[0m14:39:34.616841 [info ] [MainThread]: Using profiles.yml file at C:\Users\oscar.aguilar\.dbt\profiles.yml
+[0m14:39:34.618064 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\oscar.aguilar\jaffle_shop\dbt_project.yml
+[0m14:39:34.618630 [info ] [MainThread]: adapter type: bigquery
+[0m14:39:34.619640 [info ] [MainThread]: adapter version: 1.8.1
+[0m14:39:34.678019 [info ] [MainThread]: Configuration:
+[0m14:39:34.679025 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m14:39:34.679984 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m14:39:34.680573 [info ] [MainThread]: Required dependencies:
+[0m14:39:34.681612 [debug] [MainThread]: Executing "git --help"
+[0m14:39:34.843697 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:39:34.843697 [debug] [MainThread]: STDERR: "b''"
+[0m14:39:34.844799 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m14:39:34.844799 [info ] [MainThread]: Connection:
+[0m14:39:34.845703 [info ] [MainThread]:   method: oauth
+[0m14:39:34.846807 [info ] [MainThread]:   database: gothic-bastion-424206-q8
+[0m14:39:34.847703 [info ] [MainThread]:   execution_project: gothic-bastion-424206-q8
+[0m14:39:34.848702 [info ] [MainThread]:   schema: jaffle_shop
+[0m14:39:34.848702 [info ] [MainThread]:   location: EU
+[0m14:39:34.849762 [info ] [MainThread]:   priority: interactive
+[0m14:39:34.849762 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m14:39:34.850703 [info ] [MainThread]:   impersonate_service_account: None
+[0m14:39:34.851833 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m14:39:34.852703 [info ] [MainThread]:   job_retries: 1
+[0m14:39:34.852703 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m14:39:34.853708 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m14:39:34.854702 [info ] [MainThread]:   timeout_seconds: 300
+[0m14:39:34.854702 [info ] [MainThread]:   client_id: None
+[0m14:39:34.855703 [info ] [MainThread]:   token_uri: None
+[0m14:39:34.856702 [info ] [MainThread]:   dataproc_region: None
+[0m14:39:34.856702 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m14:39:34.857590 [info ] [MainThread]:   gcs_bucket: None
+[0m14:39:34.857590 [info ] [MainThread]:   dataproc_batch: None
+[0m14:39:34.859116 [info ] [MainThread]: Registered adapter: bigquery=1.8.1
+[0m14:39:34.860141 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m14:39:34.860141 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:39:34.879017 [debug] [MainThread]: On debug: select 1 as id
+[0m14:39:38.640421 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=gothic-bastion-424206-q8&j=bq:EU:d92647bf-956c-456e-a405-0ce2206f5007&page=queryresults
+[0m14:39:39.135727 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m14:39:39.145345 [info ] [MainThread]: [32mAll checks passed![0m
+[0m14:39:39.151342 [debug] [MainThread]: Command `dbt debug` succeeded at 14:39:39.150338 after 7.73 seconds
+[0m14:39:39.152339 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m14:39:39.153354 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7E2ED8560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7FB8622A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7E39254F0>]}
+[0m14:39:39.155554 [debug] [MainThread]: Flushing usage events
+[0m06:49:35.875724 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F7F70095E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F7F9D38680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F7F9D3A2A0>]}
+
+
+============================== 06:49:35.904740 | 34e06651-1ac9-42c2-8f37-6f7c97eb5394 ==============================
+[0m06:49:35.904740 [info ] [MainThread]: Running with dbt=1.8.1
+[0m06:49:35.905734 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\oscar.aguilar\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\oscar.aguilar\\jaffle_shop\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt init jaffle_shop', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m06:49:36.161585 [info ] [MainThread]: Setting up your profile.
+[0m06:49:36.176586 [debug] [MainThread]: Command `dbt init` succeeded at 06:49:36.176586 after 0.56 seconds
+[0m06:49:36.177584 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F7F9E50890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F7F9E50530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F7F9E850D0>]}
+[0m06:49:36.178584 [debug] [MainThread]: Flushing usage events
+[0m06:50:07.742587 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020866A04C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002086690B740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020866229460>]}
+
+
+============================== 06:50:07.752448 | e1d1c53c-2415-4711-9c32-7b7d73c22772 ==============================
+[0m06:50:07.752448 [info ] [MainThread]: Running with dbt=1.8.1
+[0m06:50:07.753448 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\oscar.aguilar\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'C:\\Users\\oscar.aguilar\\jaffle_shop\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m06:50:07.852992 [info ] [MainThread]: dbt version: 1.8.1
+[0m06:50:07.853990 [info ] [MainThread]: python version: 3.12.3
+[0m06:50:07.853990 [info ] [MainThread]: python path: C:\Users\oscar.aguilar\dbt-env\Scripts\python.exe
+[0m06:50:07.854988 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m06:50:25.625453 [info ] [MainThread]: Using profiles dir at C:\Users\oscar.aguilar\.dbt
+[0m06:50:25.626388 [info ] [MainThread]: Using profiles.yml file at C:\Users\oscar.aguilar\.dbt\profiles.yml
+[0m06:50:25.626388 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\oscar.aguilar\jaffle_shop\dbt_project.yml
+[0m06:50:25.627498 [info ] [MainThread]: adapter type: bigquery
+[0m06:50:25.627498 [info ] [MainThread]: adapter version: 1.8.1
+[0m06:50:25.719879 [info ] [MainThread]: Configuration:
+[0m06:50:25.720860 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m06:50:25.721879 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m06:50:25.722863 [info ] [MainThread]: Required dependencies:
+[0m06:50:25.724124 [debug] [MainThread]: Executing "git --help"
+[0m06:50:26.282720 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m06:50:26.283831 [debug] [MainThread]: STDERR: "b''"
+[0m06:50:26.284834 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m06:50:26.285722 [info ] [MainThread]: Connection:
+[0m06:50:26.286715 [info ] [MainThread]:   method: oauth
+[0m06:50:26.286715 [info ] [MainThread]:   database: gothic-bastion-424206-q8
+[0m06:50:26.287715 [info ] [MainThread]:   execution_project: gothic-bastion-424206-q8
+[0m06:50:26.287715 [info ] [MainThread]:   schema: jaffle_shop
+[0m06:50:26.288715 [info ] [MainThread]:   location: EU
+[0m06:50:26.289715 [info ] [MainThread]:   priority: interactive
+[0m06:50:26.289715 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m06:50:26.290716 [info ] [MainThread]:   impersonate_service_account: None
+[0m06:50:26.291725 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m06:50:26.291725 [info ] [MainThread]:   job_retries: 1
+[0m06:50:26.292715 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m06:50:26.292715 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m06:50:26.293716 [info ] [MainThread]:   timeout_seconds: 300
+[0m06:50:26.293716 [info ] [MainThread]:   client_id: None
+[0m06:50:26.294716 [info ] [MainThread]:   token_uri: None
+[0m06:50:26.295716 [info ] [MainThread]:   dataproc_region: None
+[0m06:50:26.296715 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m06:50:26.297750 [info ] [MainThread]:   gcs_bucket: None
+[0m06:50:26.298734 [info ] [MainThread]:   dataproc_batch: None
+[0m06:50:26.300732 [info ] [MainThread]: Registered adapter: bigquery=1.8.1
+[0m06:50:26.301731 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m06:50:26.301731 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m06:50:35.042332 [debug] [MainThread]: On debug: select 1 as id
+[0m06:50:35.827141 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=gothic-bastion-424206-q8&j=bq:EU:3eafd9f7-01c0-4300-8235-d3e466fb74c9&page=queryresults
+[0m06:50:36.398130 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m06:50:36.403129 [info ] [MainThread]: [32mAll checks passed![0m
+[0m06:50:36.408228 [debug] [MainThread]: Command `dbt debug` succeeded at 06:50:36.408228 after 28.89 seconds
+[0m06:50:36.410122 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m06:50:36.410122 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020864659AC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002087FDDD9D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002087EF26F60>]}
+[0m06:50:36.411119 [debug] [MainThread]: Flushing usage events
+[0m07:27:35.216991 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174B1EB1430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174B1EB1550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174B1735E20>]}
+
+
+============================== 07:27:35.227074 | 8e2bad81-619c-4fd5-816c-954eb72840b2 ==============================
+[0m07:27:35.227074 [info ] [MainThread]: Running with dbt=1.8.1
+[0m07:27:35.228081 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\oscar.aguilar\\.dbt', 'log_path': 'C:\\Users\\oscar.aguilar\\jaffle_shop\\logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m07:27:40.614270 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8e2bad81-619c-4fd5-816c-954eb72840b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174CB3570B0>]}
+[0m07:27:40.681542 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8e2bad81-619c-4fd5-816c-954eb72840b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174CA751A90>]}
+[0m07:27:40.682542 [info ] [MainThread]: Registered adapter: bigquery=1.8.1
+[0m07:27:40.708559 [debug] [MainThread]: checksum: ebc509fb14e151ea268e89b60fd5abf912ed99129f87516462718fa2f14f4838, vars: {}, profile: , target: , version: 1.8.1
+[0m07:27:40.714544 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m07:27:40.715544 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '8e2bad81-619c-4fd5-816c-954eb72840b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174CC588BF0>]}
+[0m07:27:43.174998 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8e2bad81-619c-4fd5-816c-954eb72840b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174CC84B1D0>]}
+[0m07:27:43.370312 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8e2bad81-619c-4fd5-816c-954eb72840b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174CC7F9580>]}
+[0m07:27:43.370312 [info ] [MainThread]: Found 2 models, 4 data tests, 469 macros
+[0m07:27:43.371338 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8e2bad81-619c-4fd5-816c-954eb72840b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174CC8845F0>]}
+[0m07:27:43.374318 [info ] [MainThread]: 
+[0m07:27:43.375044 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m07:27:43.379065 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_gothic-bastion-424206-q8'
+[0m07:27:43.380068 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:27:46.865412 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_gothic-bastion-424206-q8_jaffle_shop'
+[0m07:27:46.866410 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:27:47.306025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8e2bad81-619c-4fd5-816c-954eb72840b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174AFAE5D60>]}
+[0m07:27:47.307405 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m07:27:47.309431 [info ] [MainThread]: 
+[0m07:27:47.333911 [debug] [Thread-1 (]: Began running node model.jaffle_shop.my_first_dbt_model
+[0m07:27:47.333911 [info ] [Thread-1 (]: 1 of 2 START sql table model jaffle_shop.my_first_dbt_model .................... [RUN]
+[0m07:27:47.334917 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.jaffle_shop.my_first_dbt_model'
+[0m07:27:47.336293 [debug] [Thread-1 (]: Began compiling node model.jaffle_shop.my_first_dbt_model
+[0m07:27:47.342609 [debug] [Thread-1 (]: Writing injected SQL for node "model.jaffle_shop.my_first_dbt_model"
+[0m07:27:47.344611 [debug] [Thread-1 (]: Began executing node model.jaffle_shop.my_first_dbt_model
+[0m07:27:47.355612 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m07:27:47.780078 [debug] [Thread-1 (]: Writing runtime sql for node "model.jaffle_shop.my_first_dbt_model"
+[0m07:27:47.785081 [debug] [Thread-1 (]: On model.jaffle_shop.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `gothic-bastion-424206-q8`.`jaffle_shop`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m07:27:48.025864 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=gothic-bastion-424206-q8&j=bq:EU:4464c235-7051-4109-b8ba-b97eac40b312&page=queryresults
+[0m07:27:48.026971 [debug] [Thread-1 (]: BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `gothic-bastion-424206-q8`.`jaffle_shop`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m07:27:48.028985 [debug] [Thread-1 (]: BigQuery adapter: 404 Not found: Dataset gothic-bastion-424206-q8:jaffle_shop was not found in location EU; reason: notFound, message: Not found: Dataset gothic-bastion-424206-q8:jaffle_shop was not found in location EU
+
+Location: EU
+Job ID: 4464c235-7051-4109-b8ba-b97eac40b312
+
+[0m07:27:48.171581 [debug] [Thread-1 (]: Runtime Error in model my_first_dbt_model (models\example\my_first_dbt_model.sql)
+  404 Not found: Dataset gothic-bastion-424206-q8:jaffle_shop was not found in location EU; reason: notFound, message: Not found: Dataset gothic-bastion-424206-q8:jaffle_shop was not found in location EU
+  
+  Location: EU
+  Job ID: 4464c235-7051-4109-b8ba-b97eac40b312
+  
+[0m07:27:48.172583 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8e2bad81-619c-4fd5-816c-954eb72840b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174CC661580>]}
+[0m07:27:48.173582 [error] [Thread-1 (]: 1 of 2 ERROR creating sql table model jaffle_shop.my_first_dbt_model ........... [[31mERROR[0m in 0.84s]
+[0m07:27:48.174583 [debug] [Thread-1 (]: Finished running node model.jaffle_shop.my_first_dbt_model
+[0m07:27:48.176582 [debug] [Thread-1 (]: Began running node model.jaffle_shop.my_second_dbt_model
+[0m07:27:48.177632 [info ] [Thread-1 (]: 2 of 2 SKIP relation jaffle_shop.my_second_dbt_model ........................... [[33mSKIP[0m]
+[0m07:27:48.178582 [debug] [Thread-1 (]: Finished running node model.jaffle_shop.my_second_dbt_model
+[0m07:27:48.179893 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:27:48.180782 [debug] [MainThread]: Connection 'list_gothic-bastion-424206-q8' was properly closed.
+[0m07:27:48.180782 [debug] [MainThread]: Connection 'list_gothic-bastion-424206-q8_jaffle_shop' was properly closed.
+[0m07:27:48.180782 [debug] [MainThread]: Connection 'model.jaffle_shop.my_first_dbt_model' was properly closed.
+[0m07:27:48.181782 [info ] [MainThread]: 
+[0m07:27:48.183783 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 4.81 seconds (4.81s).
+[0m07:27:48.184781 [debug] [MainThread]: Command end result
+[0m07:27:48.223804 [info ] [MainThread]: 
+[0m07:27:48.225801 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m07:27:48.226798 [info ] [MainThread]: 
+[0m07:27:48.227798 [error] [MainThread]:   Runtime Error in model my_first_dbt_model (models\example\my_first_dbt_model.sql)
+  404 Not found: Dataset gothic-bastion-424206-q8:jaffle_shop was not found in location EU; reason: notFound, message: Not found: Dataset gothic-bastion-424206-q8:jaffle_shop was not found in location EU
+  
+  Location: EU
+  Job ID: 4464c235-7051-4109-b8ba-b97eac40b312
+  
+[0m07:27:48.228782 [info ] [MainThread]: 
+[0m07:27:48.229781 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=1 TOTAL=2
+[0m07:27:48.231797 [debug] [MainThread]: Command `dbt run` failed at 07:27:48.231797 after 13.67 seconds
+[0m07:27:48.231797 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174AC087350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174B1E9EB10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174B1EF1430>]}
+[0m07:27:48.232797 [debug] [MainThread]: Flushing usage events
+[0m07:28:52.860428 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000238CCBD6B70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000238D06313A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000238D0633F20>]}
+
+
+============================== 07:28:52.866476 | 0d0fa367-92e3-496b-91fa-c9647d000622 ==============================
+[0m07:28:52.866476 [info ] [MainThread]: Running with dbt=1.8.1
+[0m07:28:52.867479 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\oscar.aguilar\\.dbt', 'log_path': 'C:\\Users\\oscar.aguilar\\jaffle_shop\\logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m07:28:52.911290 [info ] [MainThread]: dbt version: 1.8.1
+[0m07:28:52.912289 [info ] [MainThread]: python version: 3.12.3
+[0m07:28:52.913282 [info ] [MainThread]: python path: C:\Users\oscar.aguilar\dbt-env\Scripts\python.exe
+[0m07:28:52.913282 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m07:28:56.432590 [info ] [MainThread]: Using profiles dir at C:\Users\oscar.aguilar\.dbt
+[0m07:28:56.434647 [info ] [MainThread]: Using profiles.yml file at C:\Users\oscar.aguilar\.dbt\profiles.yml
+[0m07:28:56.434647 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\oscar.aguilar\jaffle_shop\dbt_project.yml
+[0m07:28:56.435735 [info ] [MainThread]: adapter type: bigquery
+[0m07:28:56.436612 [info ] [MainThread]: adapter version: 1.8.1
+[0m07:28:56.521368 [info ] [MainThread]: Configuration:
+[0m07:28:56.522330 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m07:28:56.524331 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m07:28:56.525329 [info ] [MainThread]: Required dependencies:
+[0m07:28:56.526327 [debug] [MainThread]: Executing "git --help"
+[0m07:28:56.644131 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m07:28:56.645151 [debug] [MainThread]: STDERR: "b''"
+[0m07:28:56.645151 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m07:28:56.647143 [info ] [MainThread]: Connection:
+[0m07:28:56.648148 [info ] [MainThread]:   method: oauth
+[0m07:28:56.649145 [info ] [MainThread]:   database: gothic-bastion-424206-q8
+[0m07:28:56.650145 [info ] [MainThread]:   execution_project: gothic-bastion-424206-q8
+[0m07:28:56.651200 [info ] [MainThread]:   schema: jaffle_shop
+[0m07:28:56.652202 [info ] [MainThread]:   location: EU
+[0m07:28:56.652202 [info ] [MainThread]:   priority: interactive
+[0m07:28:56.653209 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m07:28:56.653209 [info ] [MainThread]:   impersonate_service_account: None
+[0m07:28:56.654160 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m07:28:56.654160 [info ] [MainThread]:   job_retries: 1
+[0m07:28:56.655192 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m07:28:56.656157 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m07:28:56.657145 [info ] [MainThread]:   timeout_seconds: 300
+[0m07:28:56.657145 [info ] [MainThread]:   client_id: None
+[0m07:28:56.658151 [info ] [MainThread]:   token_uri: None
+[0m07:28:56.659152 [info ] [MainThread]:   dataproc_region: None
+[0m07:28:56.660211 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m07:28:56.660211 [info ] [MainThread]:   gcs_bucket: None
+[0m07:28:56.661156 [info ] [MainThread]:   dataproc_batch: None
+[0m07:28:56.662188 [info ] [MainThread]: Registered adapter: bigquery=1.8.1
+[0m07:28:56.663154 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m07:28:56.663154 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m07:28:59.739575 [debug] [MainThread]: On debug: select 1 as id
+[0m07:29:00.344082 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=gothic-bastion-424206-q8&j=bq:EU:558c0b11-fc5c-4f81-a73a-ddb120144050&page=queryresults
+[0m07:29:00.847811 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m07:29:00.849807 [info ] [MainThread]: [32mAll checks passed![0m
+[0m07:29:00.852806 [debug] [MainThread]: Command `dbt debug` succeeded at 07:29:00.851811 after 8.28 seconds
+[0m07:29:00.853809 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m07:29:00.854810 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000238CFB55A30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000238E90DA8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000238CDDB7CB0>]}
+[0m07:29:00.855813 [debug] [MainThread]: Flushing usage events
+[0m07:29:17.149926 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F1F9B74320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F1F9FFB680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F1F9B75700>]}
+
+
+============================== 07:29:17.157034 | 63f5c7b5-ae43-4220-95b7-dad65138a03f ==============================
+[0m07:29:17.157034 [info ] [MainThread]: Running with dbt=1.8.1
+[0m07:29:17.158992 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\oscar.aguilar\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\oscar.aguilar\\jaffle_shop\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt build', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m07:29:21.242168 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '63f5c7b5-ae43-4220-95b7-dad65138a03f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F1F7EDBE30>]}
+[0m07:29:21.279963 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '63f5c7b5-ae43-4220-95b7-dad65138a03f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F1F7F41B20>]}
+[0m07:29:21.281907 [info ] [MainThread]: Registered adapter: bigquery=1.8.1
+[0m07:29:21.295940 [debug] [MainThread]: checksum: ebc509fb14e151ea268e89b60fd5abf912ed99129f87516462718fa2f14f4838, vars: {}, profile: , target: , version: 1.8.1
+[0m07:29:21.665994 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m07:29:21.667038 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m07:29:21.689132 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '63f5c7b5-ae43-4220-95b7-dad65138a03f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F1949BABD0>]}
+[0m07:29:21.848611 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '63f5c7b5-ae43-4220-95b7-dad65138a03f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F194BC6BA0>]}
+[0m07:29:21.848611 [info ] [MainThread]: Found 2 models, 4 data tests, 469 macros
+[0m07:29:21.851614 [info ] [MainThread]: 
+[0m07:29:21.853620 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m07:29:21.856135 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_gothic-bastion-424206-q8'
+[0m07:29:21.857154 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:29:25.590033 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_gothic-bastion-424206-q8_jaffle_shop'
+[0m07:29:25.591073 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:29:26.002956 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '63f5c7b5-ae43-4220-95b7-dad65138a03f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F1F7F41D90>]}
+[0m07:29:26.004066 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m07:29:26.005008 [info ] [MainThread]: 
+[0m07:29:26.010955 [debug] [Thread-1 (]: Began running node model.jaffle_shop.my_first_dbt_model
+[0m07:29:26.011954 [info ] [Thread-1 (]: 1 of 6 START sql table model jaffle_shop.my_first_dbt_model .................... [RUN]
+[0m07:29:26.012955 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.jaffle_shop.my_first_dbt_model'
+[0m07:29:26.013954 [debug] [Thread-1 (]: Began compiling node model.jaffle_shop.my_first_dbt_model
+[0m07:29:26.027063 [debug] [Thread-1 (]: Writing injected SQL for node "model.jaffle_shop.my_first_dbt_model"
+[0m07:29:26.029955 [debug] [Thread-1 (]: Began executing node model.jaffle_shop.my_first_dbt_model
+[0m07:29:26.047955 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m07:29:26.516769 [debug] [Thread-1 (]: Writing runtime sql for node "model.jaffle_shop.my_first_dbt_model"
+[0m07:29:26.520685 [debug] [Thread-1 (]: On model.jaffle_shop.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `gothic-bastion-424206-q8`.`jaffle_shop`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m07:29:26.717506 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=gothic-bastion-424206-q8&j=bq:EU:1387915d-adbc-4c97-bf90-722262ac8403&page=queryresults
+[0m07:29:26.717506 [debug] [Thread-1 (]: BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `gothic-bastion-424206-q8`.`jaffle_shop`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m07:29:26.718605 [debug] [Thread-1 (]: BigQuery adapter: 404 Not found: Dataset gothic-bastion-424206-q8:jaffle_shop was not found in location EU; reason: notFound, message: Not found: Dataset gothic-bastion-424206-q8:jaffle_shop was not found in location EU
+
+Location: EU
+Job ID: 1387915d-adbc-4c97-bf90-722262ac8403
+
+[0m07:29:26.788577 [debug] [Thread-1 (]: Runtime Error in model my_first_dbt_model (models\example\my_first_dbt_model.sql)
+  404 Not found: Dataset gothic-bastion-424206-q8:jaffle_shop was not found in location EU; reason: notFound, message: Not found: Dataset gothic-bastion-424206-q8:jaffle_shop was not found in location EU
+  
+  Location: EU
+  Job ID: 1387915d-adbc-4c97-bf90-722262ac8403
+  
+[0m07:29:26.790581 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '63f5c7b5-ae43-4220-95b7-dad65138a03f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F194E1AAB0>]}
+[0m07:29:26.791581 [error] [Thread-1 (]: 1 of 6 ERROR creating sql table model jaffle_shop.my_first_dbt_model ........... [[31mERROR[0m in 0.78s]
+[0m07:29:26.801576 [debug] [Thread-1 (]: Finished running node model.jaffle_shop.my_first_dbt_model
+[0m07:29:26.803577 [debug] [Thread-1 (]: Began running node test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710
+[0m07:29:26.804576 [info ] [Thread-1 (]: 2 of 6 SKIP test not_null_my_first_dbt_model_id ................................ [[33mSKIP[0m]
+[0m07:29:26.805576 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710
+[0m07:29:26.805576 [debug] [Thread-1 (]: Began running node test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321
+[0m07:29:26.806680 [info ] [Thread-1 (]: 3 of 6 SKIP test unique_my_first_dbt_model_id .................................. [[33mSKIP[0m]
+[0m07:29:26.807681 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321
+[0m07:29:26.808670 [debug] [Thread-1 (]: Began running node model.jaffle_shop.my_second_dbt_model
+[0m07:29:26.809578 [info ] [Thread-1 (]: 4 of 6 SKIP relation jaffle_shop.my_second_dbt_model ........................... [[33mSKIP[0m]
+[0m07:29:26.810578 [debug] [Thread-1 (]: Finished running node model.jaffle_shop.my_second_dbt_model
+[0m07:29:26.811575 [debug] [Thread-1 (]: Began running node test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778
+[0m07:29:26.812680 [info ] [Thread-1 (]: 5 of 6 SKIP test not_null_my_second_dbt_model_id ............................... [[33mSKIP[0m]
+[0m07:29:26.813577 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778
+[0m07:29:26.814575 [debug] [Thread-1 (]: Began running node test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493
+[0m07:29:26.814575 [info ] [Thread-1 (]: 6 of 6 SKIP test unique_my_second_dbt_model_id ................................. [[33mSKIP[0m]
+[0m07:29:26.815578 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493
+[0m07:29:26.817576 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:29:26.817576 [debug] [MainThread]: Connection 'list_gothic-bastion-424206-q8' was properly closed.
+[0m07:29:26.818576 [debug] [MainThread]: Connection 'list_gothic-bastion-424206-q8_jaffle_shop' was properly closed.
+[0m07:29:26.818576 [debug] [MainThread]: Connection 'model.jaffle_shop.my_first_dbt_model' was properly closed.
+[0m07:29:26.818576 [info ] [MainThread]: 
+[0m07:29:26.819668 [info ] [MainThread]: Finished running 1 table model, 4 data tests, 1 view model in 0 hours 0 minutes and 4.97 seconds (4.97s).
+[0m07:29:26.821684 [debug] [MainThread]: Command end result
+[0m07:29:26.851708 [info ] [MainThread]: 
+[0m07:29:26.853590 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m07:29:26.854583 [info ] [MainThread]: 
+[0m07:29:26.855583 [error] [MainThread]:   Runtime Error in model my_first_dbt_model (models\example\my_first_dbt_model.sql)
+  404 Not found: Dataset gothic-bastion-424206-q8:jaffle_shop was not found in location EU; reason: notFound, message: Not found: Dataset gothic-bastion-424206-q8:jaffle_shop was not found in location EU
+  
+  Location: EU
+  Job ID: 1387915d-adbc-4c97-bf90-722262ac8403
+  
+[0m07:29:26.856582 [info ] [MainThread]: 
+[0m07:29:26.857582 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=5 TOTAL=6
+[0m07:29:26.859687 [debug] [MainThread]: Command `dbt build` failed at 07:29:26.859687 after 10.00 seconds
+[0m07:29:26.860694 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F1F9FA5430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F1FA445190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F1FA182A80>]}
+[0m07:29:26.860694 [debug] [MainThread]: Flushing usage events
+[0m07:47:08.906100 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021928502690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002192A3F9AC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002192AC70DA0>]}
+
+
+============================== 07:47:08.912110 | 08b17a37-097d-4b68-8eb9-1b3bf1c71a44 ==============================
+[0m07:47:08.912110 [info ] [MainThread]: Running with dbt=1.8.1
+[0m07:47:08.913097 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\oscar.aguilar\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\oscar.aguilar\\jaffle_shop\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt build', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m07:47:11.769345 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '08b17a37-097d-4b68-8eb9-1b3bf1c71a44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021943FDD100>]}
+[0m07:47:11.806940 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '08b17a37-097d-4b68-8eb9-1b3bf1c71a44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021943E91F70>]}
+[0m07:47:11.807951 [info ] [MainThread]: Registered adapter: bigquery=1.8.1
+[0m07:47:11.817972 [debug] [MainThread]: checksum: ebc509fb14e151ea268e89b60fd5abf912ed99129f87516462718fa2f14f4838, vars: {}, profile: , target: , version: 1.8.1
+[0m07:47:12.094199 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m07:47:12.094199 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m07:47:12.117201 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '08b17a37-097d-4b68-8eb9-1b3bf1c71a44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021945519010>]}
+[0m07:47:12.253069 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '08b17a37-097d-4b68-8eb9-1b3bf1c71a44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002194573C410>]}
+[0m07:47:12.254067 [info ] [MainThread]: Found 2 models, 4 data tests, 469 macros
+[0m07:47:12.256067 [info ] [MainThread]: 
+[0m07:47:12.256067 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m07:47:12.260068 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_gothic-bastion-424206-q8'
+[0m07:47:12.261067 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:47:15.080476 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_gothic-bastion-424206-q8_jaffle_shop'
+[0m07:47:15.080476 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:47:15.576830 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '08b17a37-097d-4b68-8eb9-1b3bf1c71a44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002194546E450>]}
+[0m07:47:15.577818 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m07:47:15.578707 [info ] [MainThread]: 
+[0m07:47:15.588073 [debug] [Thread-1 (]: Began running node model.jaffle_shop.my_first_dbt_model
+[0m07:47:15.589046 [info ] [Thread-1 (]: 1 of 6 START sql table model jaffle_shop.my_first_dbt_model .................... [RUN]
+[0m07:47:15.589046 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.jaffle_shop.my_first_dbt_model'
+[0m07:47:15.590149 [debug] [Thread-1 (]: Began compiling node model.jaffle_shop.my_first_dbt_model
+[0m07:47:15.602158 [debug] [Thread-1 (]: Writing injected SQL for node "model.jaffle_shop.my_first_dbt_model"
+[0m07:47:15.605142 [debug] [Thread-1 (]: Began executing node model.jaffle_shop.my_first_dbt_model
+[0m07:47:15.639093 [debug] [Thread-1 (]: Writing runtime sql for node "model.jaffle_shop.my_first_dbt_model"
+[0m07:47:15.643046 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m07:47:15.643046 [debug] [Thread-1 (]: On model.jaffle_shop.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `gothic-bastion-424206-q8`.`jaffle_shop`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m07:47:16.548209 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=gothic-bastion-424206-q8&j=bq:EU:f30bc529-7aae-4b79-8c29-dbf621a4d22c&page=queryresults
+[0m07:47:18.947080 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '08b17a37-097d-4b68-8eb9-1b3bf1c71a44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021943E83650>]}
+[0m07:47:18.948057 [info ] [Thread-1 (]: 1 of 6 OK created sql table model jaffle_shop.my_first_dbt_model ............... [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 3.36s]
+[0m07:47:18.950059 [debug] [Thread-1 (]: Finished running node model.jaffle_shop.my_first_dbt_model
+[0m07:47:18.951059 [debug] [Thread-1 (]: Began running node test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710
+[0m07:47:18.952060 [info ] [Thread-1 (]: 2 of 6 START test not_null_my_first_dbt_model_id ............................... [RUN]
+[0m07:47:18.953064 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.jaffle_shop.my_first_dbt_model, now test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710)
+[0m07:47:18.953064 [debug] [Thread-1 (]: Began compiling node test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710
+[0m07:47:18.961068 [debug] [Thread-1 (]: Writing injected SQL for node "test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m07:47:18.963060 [debug] [Thread-1 (]: Began executing node test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710
+[0m07:47:18.976551 [debug] [Thread-1 (]: Writing runtime sql for node "test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m07:47:18.979550 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:47:18.980549 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from `gothic-bastion-424206-q8`.`jaffle_shop`.`my_first_dbt_model`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m07:47:19.821419 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=gothic-bastion-424206-q8&j=bq:EU:ba4fa7a3-da7b-4ed4-bfa8-182c45b24153&page=queryresults
+[0m07:47:20.564382 [error] [Thread-1 (]: 2 of 6 FAIL 1 not_null_my_first_dbt_model_id ................................... [[31mFAIL 1[0m in 1.61s]
+[0m07:47:20.566400 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710
+[0m07:47:20.568390 [debug] [Thread-1 (]: Began running node test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321
+[0m07:47:20.569390 [info ] [Thread-1 (]: 3 of 6 START test unique_my_first_dbt_model_id ................................. [RUN]
+[0m07:47:20.570485 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710, now test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321)
+[0m07:47:20.571471 [debug] [Thread-1 (]: Began compiling node test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321
+[0m07:47:20.579538 [debug] [Thread-1 (]: Writing injected SQL for node "test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321"
+[0m07:47:20.582489 [debug] [Thread-1 (]: Began executing node test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321
+[0m07:47:20.587489 [debug] [Thread-1 (]: Writing runtime sql for node "test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321"
+[0m07:47:20.590075 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:47:20.591073 [debug] [Thread-1 (]: On test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select id as unique_field
+  from `gothic-bastion-424206-q8`.`jaffle_shop`.`my_first_dbt_model`
+  where id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m07:47:21.275618 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=gothic-bastion-424206-q8&j=bq:EU:b6845246-98b9-40b8-bb3c-f836e99d58dc&page=queryresults
+[0m07:47:21.930524 [info ] [Thread-1 (]: 3 of 6 PASS unique_my_first_dbt_model_id ....................................... [[32mPASS[0m in 1.36s]
+[0m07:47:21.931523 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321
+[0m07:47:21.932807 [debug] [Thread-1 (]: Began running node model.jaffle_shop.my_second_dbt_model
+[0m07:47:21.933874 [info ] [Thread-1 (]: 4 of 6 SKIP relation jaffle_shop.my_second_dbt_model ........................... [[33mSKIP[0m]
+[0m07:47:21.934816 [debug] [Thread-1 (]: Finished running node model.jaffle_shop.my_second_dbt_model
+[0m07:47:21.935817 [debug] [Thread-1 (]: Began running node test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778
+[0m07:47:21.935817 [info ] [Thread-1 (]: 5 of 6 SKIP test not_null_my_second_dbt_model_id ............................... [[33mSKIP[0m]
+[0m07:47:21.937169 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778
+[0m07:47:21.937169 [debug] [Thread-1 (]: Began running node test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493
+[0m07:47:21.937169 [info ] [Thread-1 (]: 6 of 6 SKIP test unique_my_second_dbt_model_id ................................. [[33mSKIP[0m]
+[0m07:47:21.939180 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493
+[0m07:47:21.941177 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:47:21.941177 [debug] [MainThread]: Connection 'list_gothic-bastion-424206-q8' was properly closed.
+[0m07:47:21.942186 [debug] [MainThread]: Connection 'list_gothic-bastion-424206-q8_jaffle_shop' was properly closed.
+[0m07:47:21.943184 [debug] [MainThread]: Connection 'test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321' was properly closed.
+[0m07:47:21.943184 [info ] [MainThread]: 
+[0m07:47:21.944186 [info ] [MainThread]: Finished running 1 table model, 4 data tests, 1 view model in 0 hours 0 minutes and 9.69 seconds (9.69s).
+[0m07:47:21.946178 [debug] [MainThread]: Command end result
+[0m07:47:21.987282 [info ] [MainThread]: 
+[0m07:47:21.988223 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m07:47:21.989223 [info ] [MainThread]: 
+[0m07:47:21.990750 [error] [MainThread]: [31mFailure in test not_null_my_first_dbt_model_id (models\example\schema.yml)[0m
+[0m07:47:21.990750 [error] [MainThread]:   Got 1 result, configured to fail if != 0
+[0m07:47:21.991772 [info ] [MainThread]: 
+[0m07:47:21.993775 [info ] [MainThread]:   compiled code at target\compiled\jaffle_shop\models\example\schema.yml\not_null_my_first_dbt_model_id.sql
+[0m07:47:21.993775 [info ] [MainThread]: 
+[0m07:47:21.994813 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=3 TOTAL=6
+[0m07:47:21.996777 [debug] [MainThread]: Command `dbt build` failed at 07:47:21.996777 after 13.43 seconds
+[0m07:47:21.997829 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002192A768500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021928699B50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002192AFA5550>]}
+[0m07:47:21.998893 [debug] [MainThread]: Flushing usage events
+[0m07:48:51.982882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E0FACF64E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E0FD2C3680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E0FCE77080>]}
+
+
+============================== 07:48:51.988886 | 179c3e65-61cc-4cef-95e7-2231f9e0c052 ==============================
+[0m07:48:51.988886 [info ] [MainThread]: Running with dbt=1.8.1
+[0m07:48:51.989891 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\oscar.aguilar\\jaffle_shop\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\oscar.aguilar\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt build', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m07:48:54.817461 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '179c3e65-61cc-4cef-95e7-2231f9e0c052', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E0966FC8F0>]}
+[0m07:48:54.855493 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '179c3e65-61cc-4cef-95e7-2231f9e0c052', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E09691EE40>]}
+[0m07:48:54.856495 [info ] [MainThread]: Registered adapter: bigquery=1.8.1
+[0m07:48:54.868156 [debug] [MainThread]: checksum: ebc509fb14e151ea268e89b60fd5abf912ed99129f87516462718fa2f14f4838, vars: {}, profile: , target: , version: 1.8.1
+[0m07:48:55.161953 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m07:48:55.162961 [debug] [MainThread]: Partial parsing: updated file: jaffle_shop://models\example\my_first_dbt_model.sql
+[0m07:48:55.431799 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '179c3e65-61cc-4cef-95e7-2231f9e0c052', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E097D0EB10>]}
+[0m07:48:55.558706 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '179c3e65-61cc-4cef-95e7-2231f9e0c052', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E098271E50>]}
+[0m07:48:55.559767 [info ] [MainThread]: Found 2 models, 4 data tests, 469 macros
+[0m07:48:55.562710 [info ] [MainThread]: 
+[0m07:48:55.563784 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m07:48:55.566707 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_gothic-bastion-424206-q8'
+[0m07:48:55.567703 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:48:58.316224 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_gothic-bastion-424206-q8_jaffle_shop'
+[0m07:48:58.317148 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:48:58.586560 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '179c3e65-61cc-4cef-95e7-2231f9e0c052', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E0FB272000>]}
+[0m07:48:58.587542 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m07:48:58.588561 [info ] [MainThread]: 
+[0m07:48:58.594586 [debug] [Thread-1 (]: Began running node model.jaffle_shop.my_first_dbt_model
+[0m07:48:58.595557 [info ] [Thread-1 (]: 1 of 6 START sql table model jaffle_shop.my_first_dbt_model .................... [RUN]
+[0m07:48:58.597505 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.jaffle_shop.my_first_dbt_model'
+[0m07:48:58.597505 [debug] [Thread-1 (]: Began compiling node model.jaffle_shop.my_first_dbt_model
+[0m07:48:58.605576 [debug] [Thread-1 (]: Writing injected SQL for node "model.jaffle_shop.my_first_dbt_model"
+[0m07:48:58.608527 [debug] [Thread-1 (]: Began executing node model.jaffle_shop.my_first_dbt_model
+[0m07:48:58.626069 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m07:48:58.978797 [debug] [Thread-1 (]: Writing runtime sql for node "model.jaffle_shop.my_first_dbt_model"
+[0m07:48:58.981793 [debug] [Thread-1 (]: On model.jaffle_shop.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `gothic-bastion-424206-q8`.`jaffle_shop`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select 2 as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m07:48:59.314541 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=gothic-bastion-424206-q8&j=bq:EU:9b95416b-4ddd-4973-8ffe-7f62fb1f5973&page=queryresults
+[0m07:49:01.759177 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '179c3e65-61cc-4cef-95e7-2231f9e0c052', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E096662840>]}
+[0m07:49:01.760198 [info ] [Thread-1 (]: 1 of 6 OK created sql table model jaffle_shop.my_first_dbt_model ............... [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 3.16s]
+[0m07:49:01.761195 [debug] [Thread-1 (]: Finished running node model.jaffle_shop.my_first_dbt_model
+[0m07:49:01.763178 [debug] [Thread-1 (]: Began running node test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710
+[0m07:49:01.763178 [info ] [Thread-1 (]: 2 of 6 START test not_null_my_first_dbt_model_id ............................... [RUN]
+[0m07:49:01.765199 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.jaffle_shop.my_first_dbt_model, now test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710)
+[0m07:49:01.765199 [debug] [Thread-1 (]: Began compiling node test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710
+[0m07:49:01.888792 [debug] [Thread-1 (]: Writing injected SQL for node "test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m07:49:01.891806 [debug] [Thread-1 (]: Began executing node test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710
+[0m07:49:01.909854 [debug] [Thread-1 (]: Writing runtime sql for node "test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m07:49:01.912754 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:49:01.913753 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from `gothic-bastion-424206-q8`.`jaffle_shop`.`my_first_dbt_model`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m07:49:02.529516 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=gothic-bastion-424206-q8&j=bq:EU:6ad300da-aa6e-468f-a676-ec4bd0de0018&page=queryresults
+[0m07:49:03.237507 [info ] [Thread-1 (]: 2 of 6 PASS not_null_my_first_dbt_model_id ..................................... [[32mPASS[0m in 1.47s]
+[0m07:49:03.238505 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710
+[0m07:49:03.240506 [debug] [Thread-1 (]: Began running node test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321
+[0m07:49:03.241615 [info ] [Thread-1 (]: 3 of 6 START test unique_my_first_dbt_model_id ................................. [RUN]
+[0m07:49:03.242507 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.jaffle_shop.not_null_my_first_dbt_model_id.5fb22c2710, now test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321)
+[0m07:49:03.242507 [debug] [Thread-1 (]: Began compiling node test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321
+[0m07:49:03.251506 [debug] [Thread-1 (]: Writing injected SQL for node "test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321"
+[0m07:49:03.254506 [debug] [Thread-1 (]: Began executing node test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321
+[0m07:49:03.257505 [debug] [Thread-1 (]: Writing runtime sql for node "test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321"
+[0m07:49:03.260522 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:49:03.261522 [debug] [Thread-1 (]: On test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select id as unique_field
+  from `gothic-bastion-424206-q8`.`jaffle_shop`.`my_first_dbt_model`
+  where id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m07:49:03.922563 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=gothic-bastion-424206-q8&j=bq:EU:d0178136-53bc-4f4a-bcc1-3b1eee8af8b9&page=queryresults
+[0m07:49:04.638781 [info ] [Thread-1 (]: 3 of 6 PASS unique_my_first_dbt_model_id ....................................... [[32mPASS[0m in 1.40s]
+[0m07:49:04.640298 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321
+[0m07:49:04.642369 [debug] [Thread-1 (]: Began running node model.jaffle_shop.my_second_dbt_model
+[0m07:49:04.643338 [info ] [Thread-1 (]: 4 of 6 START sql view model jaffle_shop.my_second_dbt_model .................... [RUN]
+[0m07:49:04.645402 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.jaffle_shop.unique_my_first_dbt_model_id.16e066b321, now model.jaffle_shop.my_second_dbt_model)
+[0m07:49:04.645402 [debug] [Thread-1 (]: Began compiling node model.jaffle_shop.my_second_dbt_model
+[0m07:49:04.649360 [debug] [Thread-1 (]: Writing injected SQL for node "model.jaffle_shop.my_second_dbt_model"
+[0m07:49:04.652309 [debug] [Thread-1 (]: Began executing node model.jaffle_shop.my_second_dbt_model
+[0m07:49:04.667359 [debug] [Thread-1 (]: Writing runtime sql for node "model.jaffle_shop.my_second_dbt_model"
+[0m07:49:04.671567 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:49:04.672563 [debug] [Thread-1 (]: On model.jaffle_shop.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.my_second_dbt_model"} */
+
+
+  create or replace view `gothic-bastion-424206-q8`.`jaffle_shop`.`my_second_dbt_model`
+  OPTIONS()
+  as -- Use the `ref` function to select from other models
+
+select *
+from `gothic-bastion-424206-q8`.`jaffle_shop`.`my_first_dbt_model`
+where id = 1;
+
+
+[0m07:49:05.008192 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=gothic-bastion-424206-q8&j=bq:EU:05bad269-ea12-4ec3-ba32-fc223d4ddaf8&page=queryresults
+[0m07:49:05.488191 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '179c3e65-61cc-4cef-95e7-2231f9e0c052', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E0FD27B830>]}
+[0m07:49:05.489190 [info ] [Thread-1 (]: 4 of 6 OK created sql view model jaffle_shop.my_second_dbt_model ............... [[32mCREATE VIEW (0 processed)[0m in 0.84s]
+[0m07:49:05.490191 [debug] [Thread-1 (]: Finished running node model.jaffle_shop.my_second_dbt_model
+[0m07:49:05.491191 [debug] [Thread-1 (]: Began running node test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778
+[0m07:49:05.492191 [info ] [Thread-1 (]: 5 of 6 START test not_null_my_second_dbt_model_id .............................. [RUN]
+[0m07:49:05.495190 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.jaffle_shop.my_second_dbt_model, now test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778)
+[0m07:49:05.496206 [debug] [Thread-1 (]: Began compiling node test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778
+[0m07:49:05.501210 [debug] [Thread-1 (]: Writing injected SQL for node "test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778"
+[0m07:49:05.506191 [debug] [Thread-1 (]: Began executing node test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778
+[0m07:49:05.509195 [debug] [Thread-1 (]: Writing runtime sql for node "test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778"
+[0m07:49:05.513196 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:49:05.513196 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from `gothic-bastion-424206-q8`.`jaffle_shop`.`my_second_dbt_model`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m07:49:06.377227 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=gothic-bastion-424206-q8&j=bq:EU:87455508-5a1a-4f00-b864-9ab78497093e&page=queryresults
+[0m07:49:07.151397 [info ] [Thread-1 (]: 5 of 6 PASS not_null_my_second_dbt_model_id .................................... [[32mPASS[0m in 1.66s]
+[0m07:49:07.152400 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778
+[0m07:49:07.153397 [debug] [Thread-1 (]: Began running node test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493
+[0m07:49:07.154402 [info ] [Thread-1 (]: 6 of 6 START test unique_my_second_dbt_model_id ................................ [RUN]
+[0m07:49:07.156406 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.jaffle_shop.not_null_my_second_dbt_model_id.151b76d778, now test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493)
+[0m07:49:07.156406 [debug] [Thread-1 (]: Began compiling node test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493
+[0m07:49:07.162404 [debug] [Thread-1 (]: Writing injected SQL for node "test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493"
+[0m07:49:07.164398 [debug] [Thread-1 (]: Began executing node test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493
+[0m07:49:07.166415 [debug] [Thread-1 (]: Writing runtime sql for node "test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493"
+[0m07:49:07.168416 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:49:07.169416 [debug] [Thread-1 (]: On test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select id as unique_field
+  from `gothic-bastion-424206-q8`.`jaffle_shop`.`my_second_dbt_model`
+  where id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m07:49:07.946697 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=gothic-bastion-424206-q8&j=bq:EU:6bf524c5-b409-4cb4-af28-6ea873742312&page=queryresults
+[0m07:49:08.661448 [info ] [Thread-1 (]: 6 of 6 PASS unique_my_second_dbt_model_id ...................................... [[32mPASS[0m in 1.51s]
+[0m07:49:08.662469 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493
+[0m07:49:08.665423 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:49:08.665423 [debug] [MainThread]: Connection 'list_gothic-bastion-424206-q8' was properly closed.
+[0m07:49:08.665423 [debug] [MainThread]: Connection 'list_gothic-bastion-424206-q8_jaffle_shop' was properly closed.
+[0m07:49:08.666494 [debug] [MainThread]: Connection 'test.jaffle_shop.unique_my_second_dbt_model_id.57a0f8c493' was properly closed.
+[0m07:49:08.666494 [info ] [MainThread]: 
+[0m07:49:08.667433 [info ] [MainThread]: Finished running 1 table model, 4 data tests, 1 view model in 0 hours 0 minutes and 13.10 seconds (13.10s).
+[0m07:49:08.669492 [debug] [MainThread]: Command end result
+[0m07:49:08.699501 [info ] [MainThread]: 
+[0m07:49:08.700506 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m07:49:08.701525 [info ] [MainThread]: 
+[0m07:49:08.703496 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 TOTAL=6
+[0m07:49:08.706582 [debug] [MainThread]: Command `dbt build` succeeded at 07:49:08.705588 after 17.03 seconds
+[0m07:49:08.707497 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E0FC7FB170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E096790080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E0969BA810>]}
+[0m07:49:08.708505 [debug] [MainThread]: Flushing usage events
+[0m07:49:21.214796 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020ECF283320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020ED2B21250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020ED2D49610>]}
+
+
+============================== 07:49:21.220797 | de4c0a2a-cf41-4d7d-a3d2-aaff787997ef ==============================
+[0m07:49:21.220797 [info ] [MainThread]: Running with dbt=1.8.1
+[0m07:49:21.221796 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\oscar.aguilar\\.dbt', 'log_path': 'C:\\Users\\oscar.aguilar\\jaffle_shop\\logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m07:49:23.838973 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'de4c0a2a-cf41-4d7d-a3d2-aaff787997ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020EED7E63C0>]}
+[0m07:49:23.876728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'de4c0a2a-cf41-4d7d-a3d2-aaff787997ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020ED08A82C0>]}
+[0m07:49:23.877724 [info ] [MainThread]: Registered adapter: bigquery=1.8.1
+[0m07:49:23.888680 [debug] [MainThread]: checksum: ebc509fb14e151ea268e89b60fd5abf912ed99129f87516462718fa2f14f4838, vars: {}, profile: , target: , version: 1.8.1
+[0m07:49:24.207348 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m07:49:24.208357 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m07:49:24.233402 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'de4c0a2a-cf41-4d7d-a3d2-aaff787997ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020EED918D10>]}
+[0m07:49:24.358288 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'de4c0a2a-cf41-4d7d-a3d2-aaff787997ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020EEDA2EAE0>]}
+[0m07:49:24.359358 [info ] [MainThread]: Found 2 models, 4 data tests, 469 macros
+[0m07:49:24.360288 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'de4c0a2a-cf41-4d7d-a3d2-aaff787997ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020EED919AC0>]}
+[0m07:49:24.362313 [info ] [MainThread]: 
+[0m07:49:24.363307 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m07:49:24.369341 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_gothic-bastion-424206-q8'
+[0m07:49:24.369341 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:49:27.189766 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_gothic-bastion-424206-q8_jaffle_shop'
+[0m07:49:27.190752 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:49:27.470394 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'de4c0a2a-cf41-4d7d-a3d2-aaff787997ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020ED08F2150>]}
+[0m07:49:27.472322 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m07:49:27.473290 [info ] [MainThread]: 
+[0m07:49:27.479330 [debug] [Thread-1 (]: Began running node model.jaffle_shop.my_first_dbt_model
+[0m07:49:27.479330 [info ] [Thread-1 (]: 1 of 2 START sql table model jaffle_shop.my_first_dbt_model .................... [RUN]
+[0m07:49:27.481290 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.jaffle_shop.my_first_dbt_model'
+[0m07:49:27.481290 [debug] [Thread-1 (]: Began compiling node model.jaffle_shop.my_first_dbt_model
+[0m07:49:27.490381 [debug] [Thread-1 (]: Writing injected SQL for node "model.jaffle_shop.my_first_dbt_model"
+[0m07:49:27.494373 [debug] [Thread-1 (]: Began executing node model.jaffle_shop.my_first_dbt_model
+[0m07:49:27.513333 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m07:49:27.816824 [debug] [Thread-1 (]: Writing runtime sql for node "model.jaffle_shop.my_first_dbt_model"
+[0m07:49:27.821730 [debug] [Thread-1 (]: On model.jaffle_shop.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `gothic-bastion-424206-q8`.`jaffle_shop`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select 2 as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m07:49:28.095305 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=gothic-bastion-424206-q8&j=bq:EU:209ccce7-df0c-43a6-8d77-3ef8f4fa48a8&page=queryresults
+[0m07:49:30.427937 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'de4c0a2a-cf41-4d7d-a3d2-aaff787997ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020EEC287890>]}
+[0m07:49:30.427937 [info ] [Thread-1 (]: 1 of 2 OK created sql table model jaffle_shop.my_first_dbt_model ............... [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 2.95s]
+[0m07:49:30.429820 [debug] [Thread-1 (]: Finished running node model.jaffle_shop.my_first_dbt_model
+[0m07:49:30.431813 [debug] [Thread-1 (]: Began running node model.jaffle_shop.my_second_dbt_model
+[0m07:49:30.432815 [info ] [Thread-1 (]: 2 of 2 START sql view model jaffle_shop.my_second_dbt_model .................... [RUN]
+[0m07:49:30.433820 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.jaffle_shop.my_first_dbt_model, now model.jaffle_shop.my_second_dbt_model)
+[0m07:49:30.434910 [debug] [Thread-1 (]: Began compiling node model.jaffle_shop.my_second_dbt_model
+[0m07:49:30.440106 [debug] [Thread-1 (]: Writing injected SQL for node "model.jaffle_shop.my_second_dbt_model"
+[0m07:49:30.445249 [debug] [Thread-1 (]: Began executing node model.jaffle_shop.my_second_dbt_model
+[0m07:49:30.465080 [debug] [Thread-1 (]: Writing runtime sql for node "model.jaffle_shop.my_second_dbt_model"
+[0m07:49:30.469019 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:49:30.470021 [debug] [Thread-1 (]: On model.jaffle_shop.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.my_second_dbt_model"} */
+
+
+  create or replace view `gothic-bastion-424206-q8`.`jaffle_shop`.`my_second_dbt_model`
+  OPTIONS()
+  as -- Use the `ref` function to select from other models
+
+select *
+from `gothic-bastion-424206-q8`.`jaffle_shop`.`my_first_dbt_model`
+where id = 1;
+
+
+[0m07:49:30.793861 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=gothic-bastion-424206-q8&j=bq:EU:8bdd394c-62c2-43d8-9842-a384c5d31f4b&page=queryresults
+[0m07:49:31.163084 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'de4c0a2a-cf41-4d7d-a3d2-aaff787997ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020EEDBBF350>]}
+[0m07:49:31.163084 [info ] [Thread-1 (]: 2 of 2 OK created sql view model jaffle_shop.my_second_dbt_model ............... [[32mCREATE VIEW (0 processed)[0m in 0.73s]
+[0m07:49:31.164085 [debug] [Thread-1 (]: Finished running node model.jaffle_shop.my_second_dbt_model
+[0m07:49:31.166491 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:49:31.167502 [debug] [MainThread]: Connection 'list_gothic-bastion-424206-q8' was properly closed.
+[0m07:49:31.168580 [debug] [MainThread]: Connection 'list_gothic-bastion-424206-q8_jaffle_shop' was properly closed.
+[0m07:49:31.168580 [debug] [MainThread]: Connection 'model.jaffle_shop.my_second_dbt_model' was properly closed.
+[0m07:49:31.169613 [info ] [MainThread]: 
+[0m07:49:31.170563 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 6.81 seconds (6.81s).
+[0m07:49:31.172530 [debug] [MainThread]: Command end result
+[0m07:49:31.214501 [info ] [MainThread]: 
+[0m07:49:31.215519 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m07:49:31.217532 [info ] [MainThread]: 
+[0m07:49:31.218515 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m07:49:31.220520 [debug] [MainThread]: Command `dbt run` succeeded at 07:49:31.220520 after 10.19 seconds
+[0m07:49:31.221504 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020EED9A78F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020EED9A7CB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020EED9A7BC0>]}
+[0m07:49:31.222521 [debug] [MainThread]: Flushing usage events
+[0m08:20:47.183403 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F767AB15E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F76A631370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F76A6312B0>]}
+
+
+============================== 08:20:47.190422 | 6853b8bb-e98f-4975-a7a8-b2a60e62a0bf ==============================
+[0m08:20:47.190422 [info ] [MainThread]: Running with dbt=1.8.1
+[0m08:20:47.190422 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\oscar.aguilar\\.dbt', 'log_path': 'C:\\Users\\oscar.aguilar\\jaffle_shop\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init jaffle_shop', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m08:20:47.239430 [info ] [MainThread]: Setting up your profile.
+[0m08:20:47.268466 [debug] [MainThread]: Command `dbt init` succeeded at 08:20:47.268466 after 0.49 seconds
+[0m08:20:47.269975 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F76A673C80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F76A672CF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F766E47620>]}
+[0m08:20:47.270983 [debug] [MainThread]: Flushing usage events
