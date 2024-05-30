@@ -8197,3 +8197,218 @@ KeyboardInterrupt
 [0m13:45:41.707135 [debug] [MainThread]: Command `dbt docs serve` failed at 13:45:41.706202 after 268.36 seconds
 [0m13:45:41.709193 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A97B0AA8A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A97BD35FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A97BD35E50>]}
 [0m13:45:41.711196 [debug] [MainThread]: Flushing usage events
+[0m09:13:50.724498 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025E672DA7B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025E672DA840>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025E672DA900>]}
+
+
+============================== 09:13:50.734530 | 9d54bb37-4968-44ee-b150-ac7093c901b3 ==============================
+[0m09:13:50.734530 [info ] [MainThread]: Running with dbt=1.8.0
+[0m09:13:50.735529 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\oscar.aguilar\\.dbt', 'log_path': 'c:\\Users\\oscar.aguilar\\jaffle_shop\\logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt ', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m09:13:54.927413 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9d54bb37-4968-44ee-b150-ac7093c901b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025E65675370>]}
+[0m09:13:54.964784 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9d54bb37-4968-44ee-b150-ac7093c901b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025E023A2750>]}
+[0m09:13:54.970794 [info ] [MainThread]: Registered adapter: bigquery=1.8.1
+[0m09:13:54.980782 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m09:13:55.359069 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m09:13:55.359069 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m09:13:55.383043 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9d54bb37-4968-44ee-b150-ac7093c901b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025E0272BCB0>]}
+[0m09:13:55.522254 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9d54bb37-4968-44ee-b150-ac7093c901b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025E02624C80>]}
+[0m09:13:55.522254 [info ] [MainThread]: Found 6 models, 9 data tests, 469 macros
+[0m09:13:55.523264 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9d54bb37-4968-44ee-b150-ac7093c901b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025E024FE210>]}
+[0m09:13:55.525283 [info ] [MainThread]: 
+[0m09:13:55.526272 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m09:13:55.527256 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_gothic-bastion-424206-q8'
+[0m09:13:55.528272 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:13:58.347809 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_gothic-bastion-424206-q8_jaffle_shop'
+[0m09:13:58.348830 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:13:58.660462 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9d54bb37-4968-44ee-b150-ac7093c901b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025E025263C0>]}
+[0m09:13:58.663459 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m09:13:58.664463 [info ] [MainThread]: 
+[0m09:13:58.683361 [debug] [Thread-1 (]: Began running node model.jaffle_shop.jinjaTutorial
+[0m09:13:58.684360 [info ] [Thread-1 (]: 1 of 1 START sql table model jaffle_shop.jinjaTutorial ......................... [RUN]
+[0m09:13:58.685361 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.jaffle_shop.jinjaTutorial'
+[0m09:13:58.686360 [debug] [Thread-1 (]: Began compiling node model.jaffle_shop.jinjaTutorial
+[0m09:13:58.693464 [debug] [Thread-1 (]: Writing injected SQL for node "model.jaffle_shop.jinjaTutorial"
+[0m09:13:58.695528 [debug] [Thread-1 (]: Began executing node model.jaffle_shop.jinjaTutorial
+[0m09:13:58.721874 [debug] [Thread-1 (]: Writing runtime sql for node "model.jaffle_shop.jinjaTutorial"
+[0m09:13:58.724949 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m09:13:58.725881 [debug] [Thread-1 (]: On model.jaffle_shop.jinjaTutorial: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.jinjaTutorial"} */
+
+  
+    
+
+    create or replace table `gothic-bastion-424206-q8`.`jaffle_shop`.`jinjaTutorial`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      select
+    id as order_id,
+    user_id as customer_id,
+    order_date,
+    status
+
+from `gothic-bastion-424206-q8`.jaffle_shop.orders
+    );
+  
+[0m09:13:59.271025 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=gothic-bastion-424206-q8&j=bq:EU:b18379ea-7648-4576-a1ff-a5513b060143&page=queryresults
+[0m09:14:01.925790 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9d54bb37-4968-44ee-b150-ac7093c901b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025E00A7A7B0>]}
+[0m09:14:01.926789 [info ] [Thread-1 (]: 1 of 1 OK created sql table model jaffle_shop.jinjaTutorial .................... [[32mCREATE TABLE (0.0 rows, 0 processed)[0m in 3.24s]
+[0m09:14:01.927689 [debug] [Thread-1 (]: Finished running node model.jaffle_shop.jinjaTutorial
+[0m09:14:01.929746 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:14:01.930801 [debug] [MainThread]: Connection 'list_gothic-bastion-424206-q8' was properly closed.
+[0m09:14:01.930801 [debug] [MainThread]: Connection 'list_gothic-bastion-424206-q8_jaffle_shop' was properly closed.
+[0m09:14:01.930801 [debug] [MainThread]: Connection 'model.jaffle_shop.jinjaTutorial' was properly closed.
+[0m09:14:01.931733 [info ] [MainThread]: 
+[0m09:14:01.931733 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 6.41 seconds (6.41s).
+[0m09:14:01.932688 [debug] [MainThread]: Command end result
+[0m09:14:01.956689 [info ] [MainThread]: 
+[0m09:14:01.957688 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m09:14:01.958688 [info ] [MainThread]: 
+[0m09:14:01.958688 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m09:14:01.960156 [debug] [MainThread]: Command `cli run` succeeded at 09:14:01.960156 after 11.49 seconds
+[0m09:14:01.961163 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025E67912B40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025E67BB63F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025E67BB62D0>]}
+[0m09:14:01.961163 [debug] [MainThread]: Flushing usage events
+[0m09:14:58.113193 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7BBFF1FA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7BF94A3C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7BF9D6240>]}
+
+
+============================== 09:14:58.125394 | 2397cdf6-250d-42e3-9783-10320ffd9e5f ==============================
+[0m09:14:58.125394 [info ] [MainThread]: Running with dbt=1.8.0
+[0m09:14:58.126387 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'c:\\Users\\oscar.aguilar\\jaffle_shop\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\oscar.aguilar\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt ', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m09:15:01.566978 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2397cdf6-250d-42e3-9783-10320ffd9e5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7D79B7CB0>]}
+[0m09:15:01.603314 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2397cdf6-250d-42e3-9783-10320ffd9e5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7BF9B7D70>]}
+[0m09:15:01.605217 [info ] [MainThread]: Registered adapter: bigquery=1.8.1
+[0m09:15:01.614678 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m09:15:02.171510 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m09:15:02.171510 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m09:15:02.195561 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2397cdf6-250d-42e3-9783-10320ffd9e5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7DA3B52B0>]}
+[0m09:15:02.402236 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2397cdf6-250d-42e3-9783-10320ffd9e5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7DA5229F0>]}
+[0m09:15:02.402236 [info ] [MainThread]: Found 6 models, 9 data tests, 469 macros
+[0m09:15:02.404608 [info ] [MainThread]: 
+[0m09:15:02.405590 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m09:15:02.406628 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_gothic-bastion-424206-q8'
+[0m09:15:02.407743 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:15:05.810552 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_gothic-bastion-424206-q8_jaffle_shop'
+[0m09:15:05.811549 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:15:06.051663 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2397cdf6-250d-42e3-9783-10320ffd9e5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7DA3E2BA0>]}
+[0m09:15:06.052714 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m09:15:06.053713 [info ] [MainThread]: 
+[0m09:15:06.060635 [debug] [Thread-1 (]: Began running node model.jaffle_shop.jinjaTutorial
+[0m09:15:06.061642 [info ] [Thread-1 (]: 1 of 1 START sql table model jaffle_shop.jinjaTutorial ......................... [RUN]
+[0m09:15:06.062634 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.jaffle_shop.jinjaTutorial'
+[0m09:15:06.062634 [debug] [Thread-1 (]: Began compiling node model.jaffle_shop.jinjaTutorial
+[0m09:15:06.068696 [debug] [Thread-1 (]: Writing injected SQL for node "model.jaffle_shop.jinjaTutorial"
+[0m09:15:06.070684 [debug] [Thread-1 (]: Began executing node model.jaffle_shop.jinjaTutorial
+[0m09:15:06.080696 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m09:15:06.391177 [debug] [Thread-1 (]: Writing runtime sql for node "model.jaffle_shop.jinjaTutorial"
+[0m09:15:06.393694 [debug] [Thread-1 (]: On model.jaffle_shop.jinjaTutorial: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.jinjaTutorial"} */
+
+  
+    
+
+    create or replace table `gothic-bastion-424206-q8`.`jaffle_shop`.`jinjaTutorial`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      select
+    id as order_id,
+    user_id as customer_id,
+    order_date,
+    status
+
+from `gothic-bastion-424206-q8`.jaffle_shop.orders
+    );
+  
+[0m09:15:06.775859 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=gothic-bastion-424206-q8&j=bq:EU:3abd7c6b-79c0-4eab-95bd-b1e824bc8609&page=queryresults
+[0m09:15:09.333820 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2397cdf6-250d-42e3-9783-10320ffd9e5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7DA403500>]}
+[0m09:15:09.334821 [info ] [Thread-1 (]: 1 of 1 OK created sql table model jaffle_shop.jinjaTutorial .................... [[32mCREATE TABLE (0.0 rows, 0 processed)[0m in 3.27s]
+[0m09:15:09.335725 [debug] [Thread-1 (]: Finished running node model.jaffle_shop.jinjaTutorial
+[0m09:15:09.336727 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:15:09.337726 [debug] [MainThread]: Connection 'list_gothic-bastion-424206-q8' was properly closed.
+[0m09:15:09.337726 [debug] [MainThread]: Connection 'list_gothic-bastion-424206-q8_jaffle_shop' was properly closed.
+[0m09:15:09.337726 [debug] [MainThread]: Connection 'model.jaffle_shop.jinjaTutorial' was properly closed.
+[0m09:15:09.338759 [info ] [MainThread]: 
+[0m09:15:09.338759 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 6.93 seconds (6.93s).
+[0m09:15:09.339763 [debug] [MainThread]: Command end result
+[0m09:15:09.369981 [info ] [MainThread]: 
+[0m09:15:09.369981 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m09:15:09.370908 [info ] [MainThread]: 
+[0m09:15:09.370908 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m09:15:09.371908 [debug] [MainThread]: Command `cli build` succeeded at 09:15:09.371908 after 11.57 seconds
+[0m09:15:09.372909 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7BF9D6120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7BF8F35C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7BF707FE0>]}
+[0m09:15:09.372909 [debug] [MainThread]: Flushing usage events
+[0m09:29:50.614116 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020799959100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020799995E80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002079995A570>]}
+
+
+============================== 09:29:50.626140 | 78f5fa5d-0c5d-4643-82be-c7f57be063c8 ==============================
+[0m09:29:50.626140 [info ] [MainThread]: Running with dbt=1.8.0
+[0m09:29:50.627114 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\oscar.aguilar\\.dbt', 'log_path': 'c:\\Users\\oscar.aguilar\\jaffle_shop\\logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt ', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m09:29:54.628835 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '78f5fa5d-0c5d-4643-82be-c7f57be063c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207B39D1D60>]}
+[0m09:29:54.669836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '78f5fa5d-0c5d-4643-82be-c7f57be063c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020797D07110>]}
+[0m09:29:54.670838 [info ] [MainThread]: Registered adapter: bigquery=1.8.1
+[0m09:29:54.687228 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m09:29:55.295084 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m09:29:55.295084 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m09:29:55.318787 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '78f5fa5d-0c5d-4643-82be-c7f57be063c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207B2757E30>]}
+[0m09:29:55.473090 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '78f5fa5d-0c5d-4643-82be-c7f57be063c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207B4E15760>]}
+[0m09:29:55.473090 [info ] [MainThread]: Found 6 models, 9 data tests, 469 macros
+[0m09:29:55.474122 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '78f5fa5d-0c5d-4643-82be-c7f57be063c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207B3A32D20>]}
+[0m09:29:55.475044 [info ] [MainThread]: 
+[0m09:29:55.476143 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m09:29:55.478137 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_gothic-bastion-424206-q8'
+[0m09:29:55.478137 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:29:58.698577 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_gothic-bastion-424206-q8_jaffle_shop'
+[0m09:29:58.699586 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:29:59.008589 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '78f5fa5d-0c5d-4643-82be-c7f57be063c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207B4E0ED50>]}
+[0m09:29:59.010605 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m09:29:59.011602 [info ] [MainThread]: 
+[0m09:29:59.027133 [debug] [Thread-1 (]: Began running node model.jaffle_shop.stg_orders
+[0m09:29:59.028133 [info ] [Thread-1 (]: 1 of 1 START sql table model jaffle_shop.stg_orders ............................ [RUN]
+[0m09:29:59.029134 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.jaffle_shop.stg_orders'
+[0m09:29:59.029134 [debug] [Thread-1 (]: Began compiling node model.jaffle_shop.stg_orders
+[0m09:29:59.034133 [debug] [Thread-1 (]: Writing injected SQL for node "model.jaffle_shop.stg_orders"
+[0m09:29:59.037132 [debug] [Thread-1 (]: Began executing node model.jaffle_shop.stg_orders
+[0m09:29:59.047134 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m09:29:59.500934 [debug] [Thread-1 (]: Writing runtime sql for node "model.jaffle_shop.stg_orders"
+[0m09:29:59.503283 [debug] [Thread-1 (]: On model.jaffle_shop.stg_orders: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.stg_orders"} */
+
+  
+    
+
+    create or replace table `gothic-bastion-424206-q8`.`jaffle_shop`.`stg_orders`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      select
+    id as order_id,
+    user_id as customer_id,
+    order_date,
+    status
+
+from `gothic-bastion-424206-q8`.jaffle_shop.orders
+    );
+  
+[0m09:29:59.878341 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=gothic-bastion-424206-q8&j=bq:EU:86787602-7845-4653-b2af-d2bbd10567d7&page=queryresults
+[0m09:30:02.777419 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '78f5fa5d-0c5d-4643-82be-c7f57be063c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207B4BD7080>]}
+[0m09:30:02.778418 [info ] [Thread-1 (]: 1 of 1 OK created sql table model jaffle_shop.stg_orders ....................... [[32mCREATE TABLE (0.0 rows, 0 processed)[0m in 3.75s]
+[0m09:30:02.779418 [debug] [Thread-1 (]: Finished running node model.jaffle_shop.stg_orders
+[0m09:30:02.779418 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:30:02.780847 [debug] [MainThread]: Connection 'list_gothic-bastion-424206-q8' was properly closed.
+[0m09:30:02.780847 [debug] [MainThread]: Connection 'list_gothic-bastion-424206-q8_jaffle_shop' was properly closed.
+[0m09:30:02.780847 [debug] [MainThread]: Connection 'model.jaffle_shop.stg_orders' was properly closed.
+[0m09:30:02.781862 [info ] [MainThread]: 
+[0m09:30:02.781862 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 7.30 seconds (7.30s).
+[0m09:30:02.781862 [debug] [MainThread]: Command end result
+[0m09:30:02.814932 [info ] [MainThread]: 
+[0m09:30:02.815954 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m09:30:02.817336 [info ] [MainThread]: 
+[0m09:30:02.817336 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m09:30:02.819718 [debug] [MainThread]: Command `cli run` succeeded at 09:30:02.818700 after 12.46 seconds
+[0m09:30:02.819718 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002079A25F2F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020797E94C20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020799A58380>]}
+[0m09:30:02.819718 [debug] [MainThread]: Flushing usage events
