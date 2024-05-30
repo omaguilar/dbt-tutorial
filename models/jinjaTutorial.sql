@@ -1,7 +1,22 @@
-select
-    id as order_id,
-    user_id as customer_id,
-    order_date,
-    status
+{#
+{%  for i in range(10) %}
+    select {{ i+1 }} as number {% if not loop.last %} union all {% endif %}
+{% endfor %}
 
-from `gothic-bastion-424206-q8`.jaffle_shop.orders
+#}
+
+{% set my_teams =['Selecta','Barcelona','Cadiz','Elche'] %}
+
+
+{{ my_teams[0] }}
+
+
+{% set webster_dict ={'word':'data','speech_part':'noun','definition':'if you know you know'}
+
+ %}
+
+{{ webster_dict['word'] }}
+
+
+
+

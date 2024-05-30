@@ -42,4 +42,4 @@ final as (
 
 )
 
-select * from finalx
+select * from final
